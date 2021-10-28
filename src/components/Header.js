@@ -1,18 +1,26 @@
 import Link from "next/link";
+
 import { navLinks } from "../utils/menu";
+
+import styles from "../styles/Header.module.scss";
 
 const Header = () =>  {
   return (
-    <header>
-      <div className="brand">
-        <h3>Exemple</h3>
+    <header className={styles.menu}>
+      <div className={styles.menu__container}>
+        <div className={styles.menu__brand}>
+          🐞 <p>survivors</p>
+        </div>
       </div>
-      <nav>
+      <div className={styles.menu__section}>
+        <p>Menu</p>
+      </div>
+      <nav className={styles.menu__menuContainer}>
         {navLinks.map((menu, index) => {
           return (
-            <ul key={index}>
+            <ul className={styles.menu__menuContainer_item} key={index}>
               <Link href={menu.path} passHref>
-                <li key={index}>{menu.name}</li>
+                <li key={index}><div></div><p>{menu.name}</p></li>
               </Link>
             </ul>
           );

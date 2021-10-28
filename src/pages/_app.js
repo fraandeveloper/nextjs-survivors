@@ -4,10 +4,12 @@ import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <section className="dashboard">
       <Header />
-      <Component {...pageProps} />
-    </>
+        <div className="workspace">
+        <Component {...pageProps} />
+        </div>
+    </section>
   ) 
 }
 
