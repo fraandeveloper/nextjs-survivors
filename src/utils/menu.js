@@ -3,7 +3,7 @@ export const navLinks = [
    path: "/" 
   },
   {
-    name: "About Us",
+    name: "Survivors",
     path: "/About",
   },
 ];
